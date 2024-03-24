@@ -72,6 +72,11 @@ app.get('/msg/post/*', function(req, res) {
   res.json(allMsgs.length - 1);
 });
 
+app.get('/msg/delAll', function(req, res) {
+  allMsgs = [];
+  res.json({ "code": 1 })
+});
+
 app.listen(8080); //commence à accepter les requêtes
 console.log("App listening on port 8080...");
 
